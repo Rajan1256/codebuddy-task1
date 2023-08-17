@@ -1,9 +1,9 @@
 # codebuddy-task1
-
-[^2]:composer install
-[^2]:php artisan migrate
-[^2]:php artisan db:seed --class=CreateUsersSeeder
-
+```
+composer install
+php artisan migrate
+php artisan db:seed --class=CreateUsersSeeder
+```
 **credentials details**
 
 **Admin:-**
