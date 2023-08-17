@@ -8,7 +8,7 @@
                 <div class="card-header">User Dashboard</div>
 
                 <div class="card-body">
-                    You are normal user.
+                    Hello {{ Auth::user()->name }}.
                 </div>
             </div>
         </div>
