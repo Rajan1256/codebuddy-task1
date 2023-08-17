@@ -1,4 +1,6 @@
 # codebuddy-task1
+
+**after taking pulll run below commands**
 ```
 composer install
 php artisan migrate
