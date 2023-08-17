@@ -54,7 +54,7 @@
                     <span class="text-danger">{{ $errors->first('parent_id') }}</span>
                 </div>
                 <div class="mb-3">
-                    <input type="submit" class="btn btn-success" value="Add New">
+                    <input type="submit" class="btn btn-success" value="Add">
                 </div>
 
             </form>
