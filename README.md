@@ -1,24 +1,24 @@
 # codebuddy-task1
 
->composer install
->php artisan migrate
->php artisan db:seed --class=CreateUsersSeeder
+[^2]:composer install
+[^2]:php artisan migrate
+[^2]:php artisan db:seed --class=CreateUsersSeeder
 
 **credentials details**
 
 **Admin:-**
 
->U:- admin@codebuddy.com
->P:- 123456
+[^2]:U:- admin@codebuddy.com
+[^2]:P:- 123456
  
  >--------------------------------
 **User:-** 
   
->U:- userone@codebuddy.com
->P:- 456789
+[^2]:U:- userone@codebuddy.com
+[^2]:P:- 456789
     *******************************
->U:- usertwo@codebuddy.com
->P:- 987654
+[^2]:U:- usertwo@codebuddy.com
+[^2]:P:- 987654
     *******************************
->U:- userthree@codebuddy.com
->P:- 654321
+[^2]:U:- userthree@codebuddy.com
+[^2]:P:- 654321
