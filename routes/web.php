@@ -17,7 +17,12 @@ use App\Http\Controllers\CategoryController;
 Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-Route::get('admin/category-list', [CategoryController::class, 'manageCategory'])->name('admin.categorylist')->middleware('is_admin');
-Route::post('admin/add-category', [CategoryController::class, 'addCategory'])->name('add.category')->middleware('is_admin');
-Route::get('/admin/user/{userId}', [HomeController::class, 'getDisplayUserDash'])->name('displaydashboard')->middleware('is_admin');
+
+Route::group(['prefix' => 'admin',  'middleware' => 'is_admin'], function () {
+    Route::get('home', [HomeController::class, 'adminHome'])->name('admin.home');
+    Route::get('category-list', [CategoryController::class, 'manageCategory'])->name('admin.categorylist');
+    Route::post('add-category', [CategoryController::class, 'addCategory'])->name('add.category');
+    Route::get('/user/{userId}', [HomeController::class, 'getDisplayUserDash'])->name('displaydashboard');
+    Route::resource('categorys', CategoryController::class)->middleware('is_admin');
+});
+
